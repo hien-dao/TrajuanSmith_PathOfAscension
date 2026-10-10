@@ -1,0 +1,61 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    font-size: 8pt;
+}
+
+#main-container {
+
+}
+
+#main-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header Box */
+#header-box {
+
+}
+
+#header-box h1 {
+
+}
+
+#header-box p {
+
+}
+
+/* Navigation Bar */
+#nav-bar {
+
+}
+
+#sidebar {
+
+}
+
+#sidebar h2 {
+
+}
+
+/* Main Content Area */
+#content-area {
+
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+}
