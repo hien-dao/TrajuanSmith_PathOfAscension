@@ -1,6 +1,8 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-/* Main Content Area */
-.content-area {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,16 +17,20 @@
     background-repeat: no-repeat;
     background-position: center bottom;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-box h1 {
     font-family: 'Papyrus', 'Copperplate', fantasy;
     font-size: 3em;
     font-weight: bold;
-    margin: 85px 0 0;
+    margin: 0;
 }
 
 .title-box p {
