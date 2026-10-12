@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
 
     background-image: url('../images/background.jpg');
     background-size: cover;
@@ -15,7 +16,7 @@ body {
     background-image: url('../images/header-banner.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center;
 
     padding: 30px;
     min-height: 300px;
@@ -38,4 +39,33 @@ body {
     font-size: 1em;
     font-style: italic;
     margin: 0;
+}
+
+.introduction {
+    position:relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introduction img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.introduction p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+
+    color: black;
+    font-family: 'Papyrus', 'Copperplate', fantasy;
+    font-size: 1.5em;
+    overflow-wrap:break-word;
+ 
+    width: 55%;
+    box-sizing: border-box;
 }
