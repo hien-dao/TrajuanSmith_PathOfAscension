@@ -1,0 +1,35 @@
+
+/* Main Content Area */
+.content-area {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-box {
+    text-align: center;
+    color: black;
+
+    background-image: url('../images/header-banner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 300px;
+}
+
+.title-box h1 {
+    font-family: 'Papyrus', 'Copperplate', fantasy;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 85px 0 0;
+}
+
+.title-box p {
+    font-family: 'Papyrus', 'Copperplate', fantasy;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+}

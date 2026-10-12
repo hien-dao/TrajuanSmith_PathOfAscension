@@ -106,37 +106,6 @@ h1, h2, h3, .site-logo {
     clear: both;
 }
 
-/* Header Box */
-#header-box {
-
-}
-
-#header-box h1 {
-
-}
-
-#header-box p {
-
-}
-
-/* Navigation Bar */
-#nav-bar {
-
-}
-
-#sidebar {
-
-}
-
-#sidebar h2 {
-
-}
-
-/* Main Content Area */
-#content-area {
-
-}
-
 /* Responsive Design */
 @media (max-width: 700px) {
 
