@@ -1,0 +1,127 @@
+.journey-progress {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.checkpoint-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+}
+
+.checkpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    flex: 1;
+    min-width: 0;
+
+    padding: 20px 15px;
+    text-align: center;
+
+    background-color: #142438;
+    border: 2px solid #34465c;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.checkpoint::before {
+    content: "";
+    position: absolute;
+
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    background-color: var(--bg-primary);
+    border: 3px solid var(--border-color);
+    border-radius: 50%;
+}
+
+
+.checkpoint-list::before {
+    content: "";
+    position: absolute;
+
+    top: -20px;
+    left: 12.5%;
+    width: 75%;
+    height: 3px;
+
+    background-color: var(--border-color);
+}
+
+.checkpoint.completed::before {
+    background-color: #5da878;
+    border-color: #5da878;
+}
+
+.checkpoint.current::before {
+    background-color: #d6ad60;
+    border-color: #d6ad60;
+}
+
+
+@keyframes checkpoint-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(214, 173, 96, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(214, 173, 96, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(214, 173, 96, 0);
+    }
+}
+
+.checkpoint.current::before {
+    animation: checkpoint-pulse 2.5s ease-out infinite;
+}
+
+
+.checkpoint.locked::before {
+    background-color: var(--bg-primary);
+    border-color: #7d8c9a;
+}
+
+
+
+.checkpoint.completed {
+    border-color: #5da878;
+}
+
+.checkpoint.current {
+    border-color: #d6ad60;
+    background-color: #1d3045;
+}
+
+.checkpoint.locked {
+    background-color: #101f30;
+    border-color: #293b50;
+    color: #8998a8;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .checkpoint.current::before {
+        animation: none;
+    }
+}
