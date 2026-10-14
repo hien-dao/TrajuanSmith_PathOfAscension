@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A xianxia-themed Quest Explorer website">
-    <title>Path of Ascension</title>
+
+    <title>World Map | Path of Ascension</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/world.css">
 </head>
 <body>
     <header class="site-header">
@@ -22,6 +25,191 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section class="world-intro" aria-labelledby="world-title">
+            <h1 id="world-title">The Cultivation World</h1>
+
+            <p>
+                Explore the vast lands of the cultivation world,
+                from peaceful villages to dangerous ancient ruins.
+                Follow the path of a young cultivator as they
+                overcome challenges and journey toward ascension.
+            </p>
+        </section>
+
+        
+        <section class="journey-progress" aria-labelledby="journey-title">
+            <h2 id="journey-title">Journey Progress</h2>
+
+            <p>
+                Follow the cultivator's path through the world.
+                Each checkpoint represents another step toward ascension.
+            </p>
+
+            <ol class="checkpoint-list">
+                <li class="checkpoint completed">
+                    <span class="checkpoint-name">Starting Village</span>
+                    <span class="checkpoint-status">Completed</span>
+                </li>
+
+                <li class="checkpoint current">
+                    <span class="checkpoint-name">Grey Spirit Forest</span>
+                    <span class="checkpoint-status">Current</span>
+                </li>
+
+                <li class="checkpoint locked">
+                    <span class="checkpoint-name">Blue Mountain Sect</span>
+                    <span class="checkpoint-status">Locked</span>
+                </li>
+
+                <li class="checkpoint locked">
+                    <span class="checkpoint-name">Ancient Azure Ruins</span>
+                    <span class="checkpoint-status">Locked</span>
+                </li>
+            </ol>
+        </section>
+
+
+        <section class="world-regions" aria-labelledby="regions-title">
+            <h2 id="regions-title">Explore the Regions</h2>
+
+            <p>
+                Discover the lands that await you on your journey.
+                Each region offers new challenges, powerful enemies,
+                and opportunities to advance your cultivation.
+            </p>
+
+            <div class="region-grid">
+                
+                <article class="region-card completed">
+                    <img
+                        src="images/starting-village.jpeg"
+                        alt="A peaceful cultivation village surrounded by mountains"
+                        class="region-image"
+                    >
+
+                    <div class="region-content">
+                        <div class="region-heading">
+                            <h3>Starting Village</h3>
+                            <span class="region-status">Completed</span>
+                        </div>
+
+                        <p class="region-description">
+                            A peaceful settlement where aspiring cultivators
+                            begin their journey, learn the basics, and prepare
+                            for the challenges ahead.
+                        </p>
+
+                        <p class="region-difficulty">
+                            <strong>Difficulty:</strong> Easy
+                        </p>
+
+                        <a href="mission.html" class="region-link">
+                            View Mission
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="region-card current">
+                    <img
+                        src="images/grey-spirit-forest.jpg"
+                        alt="A mystical forest filled with ancient trees and spiritual energy"
+                        class="region-image"
+                    >
+
+                    <div class="region-content">
+                        <div class="region-heading">
+                            <h3>Grey Spirit Forest</h3>
+                            <span class="region-status">Current</span>
+                        </div>
+
+                        <p class="region-description">
+                            A mysterious forest filled with spiritual herbs
+                            and supernatural beasts. Cultivators must gather
+                            rare resources and overcome their first major trial.
+                        </p>
+
+                        <p class="region-difficulty">
+                            <strong>Difficulty:</strong> Moderate
+                        </p>
+
+                        <a href="mission.html" class="region-link">
+                            View Mission
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="region-card locked">
+                    <img
+                        src="images/blue-mountain-sect.jpg"
+                        alt="An ancient cultivation sect situated among towering mountains"
+                        class="region-image"
+                    >
+
+                    <div class="region-content">
+                        <div class="region-heading">
+                            <h3>Blue Mountain Sect</h3>
+                            <span class="region-status">Locked</span>
+                        </div>
+
+                        <p class="region-description">
+                            A powerful cultivation sect located high in
+                            the mountains. Skilled cultivators train here
+                            to master advanced techniques and strengthen
+                            their spiritual abilities.
+                        </p>
+
+                        <p class="region-difficulty">
+                            <strong>Difficulty:</strong> Hard
+                        </p>
+
+                        <span class="region-link-disabled">
+                            Mission Locked
+                        </span>
+                    </div>
+                </article>
+
+                <article class="region-card locked">
+                    <img
+                        src="images/ancient-azure-ruins.jpg"
+                        alt="Ancient ruins surrounded by mysterious spiritual energy"
+                        class="region-image"
+                    >
+
+                    <div class="region-content">
+                        <div class="region-heading">
+                            <h3>Ancient Azure Ruins</h3>
+                            <span class="region-status">Locked</span>
+                        </div>
+
+                        <p class="region-description">
+                            The remains of an ancient civilization filled
+                            with forgotten secrets, powerful artifacts,
+                            and dangerous guardians. Only experienced
+                            cultivators dare to explore these ruins.
+                        </p>
+
+                        <p class="region-difficulty">
+                            <strong>Difficulty:</strong> Very Hard
+                        </p>
+
+                        <span class="region-link-disabled">
+                            Mission Locked
+                        </span>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </section>
+
+
+
+    </main>
  
 
 
