@@ -322,3 +322,71 @@ body {
 #region4:checked ~ .region-descriptions .description-4 {
     display: block;
 }
+
+@media (max-width: 600px) {
+    .introduction {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .introduction img {
+        width: 100%;
+        height: auto;
+    }
+
+    .introduction p {
+        top: 50%;
+        left: 50%;
+        width: 58%;
+        font-size: clamp(0.55rem, 2.5vw, 0.85rem);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .featured-regions {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .region-label img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .region-label p {
+        font-size: 0.8rem;
+        overflow-wrap: anywhere;
+    }
+
+    .node-status {
+        font-size: 0.65rem;
+    }
+
+    .progress-track,
+    .progress-fill {
+        left: 8%;
+    }
+
+    .journey-progress {
+        padding: 0 8%;
+    }
+
+    .progress-track {
+        width: 84%;
+    }
+
+    .progress-fill {
+        max-width: 84%;
+    }
+
+    #region2:checked ~ .journey-progress .node-1 .node-status::after,
+    #region3:checked ~ .journey-progress .node-1 .node-status::after,
+    #region3:checked ~ .journey-progress .node-2 .node-status::after,
+    #region4:checked ~ .journey-progress .node-1 .node-status::after,
+    #region4:checked ~ .journey-progress .node-2 .node-status::after,
+    #region4:checked ~ .journey-progress .node-3 .node-status::after {
+        font-size: 0.65rem;
+    }
+}
