@@ -46,39 +46,105 @@
     <!-- Cultivation Journey -->
     <section class="cultivation-journey">
         <h2>Your Journey Progress</h2>
-        <input type="checkbox" id="region1" class="region-trigger">
-        <input type="checkbox" id="region2" class="region-trigger">
-        <input type="checkbox" id="region3" class="region-trigger">
-        <input type="checkbox" id="region4" class="region-trigger">
+
+        <input type="radio" name="region" id="region1"
+            class="region-trigger" checked>
+        <input type="radio" name="region" id="region2"
+            class="region-trigger">
+        <input type="radio" name="region" id="region3"
+            class="region-trigger">
+        <input type="radio" name="region" id="region4"
+            class="region-trigger">
 
         <div class="featured-regions">
             <label for="region1" class="region-label">
-                <img src="images/village.jpg" alt="Step 1">
+                <img src="images/village.jpg" alt="Village">
                 <p>Village</p>
             </label>
+
             <label for="region2" class="region-label">
-                <img src="images/spirit-forest.jpg" alt="Step 2">
+                <img src="images/spirit-forest.jpg" alt="Spirit Forest">
                 <p>Spirit Forest</p>
             </label>
+
             <label for="region3" class="region-label">
-                <img src="images/sect.png" alt="Step 3">
+                <img src="images/sect.png" alt="Sect">
                 <p>Sect</p>
             </label>
+
             <label for="region4" class="region-label">
-                <img src="images/ancient-ruin.jpg" alt="Step 4">
+                <img src="images/ancient-ruin.jpg" alt="Ancient Ruin">
                 <p>Ancient Ruin</p>
             </label>
         </div>
 
-        <!-- Progress Bar Visual Representation -->
+        <!-- Full-width progress bar -->
         <div class="journey-progress">
+            <div class="progress-track"></div>
             <div class="progress-fill"></div>
-            <div class="node node-1"></div>
-            <div class="node node-2"></div>
-            <div class="node node-3"></div>
-            <div class="node node-4"></div>
+
+            <div class="node node-1">
+                <span class="node-dot"></span>
+                <span class="node-status">Current</span>
+            </div>
+
+            <div class="node node-2">
+                <span class="node-dot"></span>
+                <span class="node-status">Locked</span>
+            </div>
+
+            <div class="node node-3">
+                <span class="node-dot"></span>
+                <span class="node-status">Locked</span>
+            </div>
+
+            <div class="node node-4">
+                <span class="node-dot"></span>
+                <span class="node-status">Locked</span>
+            </div>
+        </div>
+
+        <!-- Region descriptions -->
+        <div class="region-descriptions">
+            <article class="description description-1">
+                <h3>Village — The Beginning</h3>
+                <p>
+                    Every great cultivator starts somewhere. Explore your
+                    hometown, meet villagers, gather basic resources,
+                    and begin your journey toward immortality.
+                </p>
+            </article>
+
+            <article class="description description-2">
+                <h3>Spirit Forest — First Trial</h3>
+                <p>
+                    Enter a mysterious forest filled with spiritual herbs
+                    and supernatural beasts. Gather rare resources and
+                    test your cultivation abilities.
+                </p>
+            </article>
+
+            <article class="description description-3">
+                <h3>Sect — Path of Discipleship</h3>
+                <p>
+                    Join a cultivation sect, learn powerful techniques,
+                    train with fellow disciples, and prove your worth
+                    through challenging trials.
+                </p>
+            </article>
+
+            <article class="description description-4">
+                <h3>Ancient Ruin — Secrets of the Past</h3>
+                <p>
+                    Explore forgotten ruins, discover ancient techniques,
+                    overcome dangerous guardians, and uncover the secrets
+                    of legendary cultivators.
+                </p>
+            </article>
         </div>
     </section>
+
+
 
 
 </body>

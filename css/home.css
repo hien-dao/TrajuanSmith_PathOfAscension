@@ -75,98 +75,250 @@ body {
 
 /* Cultivation Journey with progress bar and image */
 .cultivation-journey {
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    padding: 30px 0 40px;
 }
 
+.cultivation-journey h2 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Hide radio buttons without disabling them */
 .region-trigger {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
+/* Featured region images */
 .featured-regions {
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
+    justify-content: space-evenly;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .region-label {
+    flex: 1;
+    min-width: 0;
     cursor: pointer;
     text-align: center;
-    width: 25%;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .region-label:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .region-label img {
     width: 150px;
     height: 150px;
+    max-width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
     border-radius: 50%;
     border: 4px solid #ccc;
-    object-fit: cover;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+/* Gold border for selected region */
+#region1:checked ~ .featured-regions label[for="region1"] img,
+#region2:checked ~ .featured-regions label[for="region2"] img,
+#region3:checked ~ .featured-regions label[for="region3"] img,
+#region4:checked ~ .featured-regions label[for="region4"] img {
+    border-color: #d4af37;
+    box-shadow: 0 0 12px #d4af37;
+}
+
+/* Full-width progress bar */
 .journey-progress {
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #e0e0e0;
-    height: 8px;
+    padding: 0 12.5%;
+    margin: 10px 0 30px;
+}
+
+.progress-track,
+.progress-fill {
+    position: absolute;
+    left: 12.5%;
+    top: 7px;
+    height: 6px;
     border-radius: 4px;
-    padding: 0 10px;
+}
+
+.progress-track {
+    width: 75%;
+    background: #ccc;
+    z-index: 0;
 }
 
 .progress-fill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0%;
+    width: 0;
+    max-width: 75%;
     background: #4CAF50;
-    border-radius: 4px;
-    transition: width 0.4s ease;
     z-index: 1;
+    transition: width 0.4s ease;
 }
 
 .node {
-    width: 20px;
-    height: 20px;
-    background: #ccc;
-    border-radius: 50%;
     position: relative;
     z-index: 2;
-    transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
 }
 
-/* 1. Highlight image borders when clicked/checked */
-#region1:checked ~ .featured-regions label[for="region1"] img { border-color: #4CAF50; }
-#region2:checked ~ .featured-regions label[for="region2"] img { border-color: #4CAF50; }
-#region3:checked ~ .featured-regions label[for="region3"] img { border-color: #4CAF50; }
-#region4:checked ~ .featured-regions label[for="region4"] img { border-color: #4CAF50; }
+.node-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #ccc;
+    border: 3px solid var(--bg-primary);
+    outline: 2px solid #ccc;
+}
 
-/* 2. Fill the progress bar dynamically based on combinations */
-#region1:checked ~ .journey-progress .progress-fill { width: 33%; }
-#region2:checked ~ .journey-progress .progress-fill { width: 66%; }
-#region3:checked ~ .journey-progress .progress-fill { width: 100%; }
-#region4:checked ~ .journey-progress .progress-fill { width: 100%; }
+.node-status {
+    position: absolute;
+    top: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #888;
+}
 
-/* Handle cumulative steps (e.g., if step 1 AND step 2 are checked) */
-#region1:checked ~ #region2:checked ~ .journey-progress .progress-fill { width: 33%; }
-#region1:checked ~ #region2:checked ~ #region3:checked ~ .journey-progress .progress-fill { width: 66%; }
-#region1:checked ~ #region2:checked ~ #region3:checked ~ #region4:checked ~ .journey-progress .progress-fill { width: 100%; }
+/* Selected node = Current */
+#region1:checked ~ .journey-progress .node-1,
+#region2:checked ~ .journey-progress .node-2,
+#region3:checked ~ .journey-progress .node-3,
+#region4:checked ~ .journey-progress .node-4 {
+    --node-color: #d4af37;
+}
 
-/* 3. Turn the node markers green when corresponding step is checked */
-#region1:checked ~ .journey-progress .node-1 { background: #4CAF50; }
-#region2:checked ~ .journey-progress .node-2 { background: #4CAF50; }
-#region3:checked ~ .journey-progress .node-3 { background: #4CAF50; }
-#region4:checked ~ .journey-progress .node-4 { background: #4CAF50; }
+#region1:checked ~ .journey-progress .node-1 .node-dot,
+#region2:checked ~ .journey-progress .node-2 .node-dot,
+#region3:checked ~ .journey-progress .node-3 .node-dot,
+#region4:checked ~ .journey-progress .node-4 .node-dot {
+    background: #d4af37;
+    outline-color: #d4af37;
+}
+
+#region1:checked ~ .journey-progress .node-1 .node-status,
+#region2:checked ~ .journey-progress .node-2 .node-status,
+#region3:checked ~ .journey-progress .node-3 .node-status,
+#region4:checked ~ .journey-progress .node-4 .node-status {
+    color: #d4af37;
+}
+
+/* Progress fill based on selected region */
+#region1:checked ~ .journey-progress .progress-fill {
+    width: 0;
+}
+
+#region2:checked ~ .journey-progress .progress-fill {
+    width: 25%;
+}
+
+#region3:checked ~ .journey-progress .progress-fill {
+    width: 50%;
+}
+
+#region4:checked ~ .journey-progress .progress-fill {
+    width: 75%;
+}
+
+/* Previous nodes = Completed */
+#region2:checked ~ .journey-progress .node-1,
+#region3:checked ~ .journey-progress .node-1,
+#region3:checked ~ .journey-progress .node-2,
+#region4:checked ~ .journey-progress .node-1,
+#region4:checked ~ .journey-progress .node-2,
+#region4:checked ~ .journey-progress .node-3 {
+    --node-color: #4CAF50;
+}
+
+#region2:checked ~ .journey-progress .node-1 .node-dot,
+#region3:checked ~ .journey-progress .node-1 .node-dot,
+#region3:checked ~ .journey-progress .node-2 .node-dot,
+#region4:checked ~ .journey-progress .node-1 .node-dot,
+#region4:checked ~ .journey-progress .node-2 .node-dot,
+#region4:checked ~ .journey-progress .node-3 .node-dot {
+    background: #4CAF50;
+    outline-color: #4CAF50;
+}
+
+#region2:checked ~ .journey-progress .node-1 .node-status,
+#region3:checked ~ .journey-progress .node-1 .node-status,
+#region3:checked ~ .journey-progress .node-2 .node-status,
+#region4:checked ~ .journey-progress .node-1 .node-status,
+#region4:checked ~ .journey-progress .node-2 .node-status,
+#region4:checked ~ .journey-progress .node-3 .node-status {
+    color: #4CAF50;
+}
+
+/* Change previous node labels to Completed */
+#region2:checked ~ .journey-progress .node-1 .node-status,
+#region3:checked ~ .journey-progress .node-1 .node-status,
+#region3:checked ~ .journey-progress .node-2 .node-status,
+#region4:checked ~ .journey-progress .node-1 .node-status,
+#region4:checked ~ .journey-progress .node-2 .node-status,
+#region4:checked ~ .journey-progress .node-3 .node-status {
+    font-size: 0;
+}
+
+#region2:checked ~ .journey-progress .node-1 .node-status::after,
+#region3:checked ~ .journey-progress .node-1 .node-status::after,
+#region3:checked ~ .journey-progress .node-2 .node-status::after,
+#region4:checked ~ .journey-progress .node-1 .node-status::after,
+#region4:checked ~ .journey-progress .node-2 .node-status::after,
+#region4:checked ~ .journey-progress .node-3 .node-status::after {
+    content: "Completed";
+    font-size: 0.85rem;
+}
+
+/* Region descriptions */
+.region-descriptions {
+    width: min(800px, 90%);
+    box-sizing: border-box;
+    padding: 25px;
+    margin-top: 10px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+}
+
+.description {
+    display: none;
+}
+
+.description h3 {
+    margin-top: 0;
+}
+
+.description p {
+    line-height: 1.7;
+}
+
+/* Show only the selected region's description */
+#region1:checked ~ .region-descriptions .description-1,
+#region2:checked ~ .region-descriptions .description-2,
+#region3:checked ~ .region-descriptions .description-3,
+#region4:checked ~ .region-descriptions .description-4 {
+    display: block;
+}
