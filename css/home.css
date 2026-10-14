@@ -1,3 +1,4 @@
+/* Body with background image and flexbox layout */
 body {
     display: flex;
     flex-direction: column;
@@ -9,6 +10,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Title box with centered text and background image */
 .title-box {
     text-align: center;
     color: black;
@@ -41,6 +43,7 @@ body {
     margin: 0;
 }
 
+/* Introduction section with centered text and scroll background image */
 .introduction {
     position:relative;
     display: inline-block;
@@ -57,15 +60,113 @@ body {
 
 .introduction p {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the text perfectly */
 
     color: black;
     font-family: 'Papyrus', 'Copperplate', fantasy;
-    font-size: 1.5em;
+    font-size: 1.7em;
     overflow-wrap:break-word;
  
     width: 55%;
     box-sizing: border-box;
 }
+
+/* Cultivation Journey with progress bar and image */
+.cultivation-journey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.region-trigger {
+    display: none;
+}
+
+.featured-regions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.region-label {
+    cursor: pointer;
+    text-align: center;
+    width: 25%;
+    transition: transform 0.2s;
+}
+
+.region-label:hover {
+transform: scale(1.05);
+}
+
+.region-label img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.journey-progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #4CAF50;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+.node {
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+/* 1. Highlight image borders when clicked/checked */
+#region1:checked ~ .featured-regions label[for="region1"] img { border-color: #4CAF50; }
+#region2:checked ~ .featured-regions label[for="region2"] img { border-color: #4CAF50; }
+#region3:checked ~ .featured-regions label[for="region3"] img { border-color: #4CAF50; }
+#region4:checked ~ .featured-regions label[for="region4"] img { border-color: #4CAF50; }
+
+/* 2. Fill the progress bar dynamically based on combinations */
+#region1:checked ~ .journey-progress .progress-fill { width: 33%; }
+#region2:checked ~ .journey-progress .progress-fill { width: 66%; }
+#region3:checked ~ .journey-progress .progress-fill { width: 100%; }
+#region4:checked ~ .journey-progress .progress-fill { width: 100%; }
+
+/* Handle cumulative steps (e.g., if step 1 AND step 2 are checked) */
+#region1:checked ~ #region2:checked ~ .journey-progress .progress-fill { width: 33%; }
+#region1:checked ~ #region2:checked ~ #region3:checked ~ .journey-progress .progress-fill { width: 66%; }
+#region1:checked ~ #region2:checked ~ #region3:checked ~ #region4:checked ~ .journey-progress .progress-fill { width: 100%; }
+
+/* 3. Turn the node markers green when corresponding step is checked */
+#region1:checked ~ .journey-progress .node-1 { background: #4CAF50; }
+#region2:checked ~ .journey-progress .node-2 { background: #4CAF50; }
+#region3:checked ~ .journey-progress .node-3 { background: #4CAF50; }
+#region4:checked ~ .journey-progress .node-4 { background: #4CAF50; }
