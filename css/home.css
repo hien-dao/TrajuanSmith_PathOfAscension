@@ -1,9 +1,10 @@
 /* Body with background image and flexbox layout */
-body {
+.hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    padding: 20px;
 
     background-image: url('../images/background.jpg');
     background-size: cover;
@@ -321,6 +322,14 @@ body {
 #region3:checked ~ .region-descriptions .description-3,
 #region4:checked ~ .region-descriptions .description-4 {
     display: block;
+}
+
+footer.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {

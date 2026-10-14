@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
+    
+    <!-- Header with navigation -->
     <header class="site-header">
         <nav class="site-nav" aria-label="Main navigation">
             <a href="index.html" class="site-logo">
@@ -25,26 +28,29 @@
         </nav>
     </header>
 
-    <!-- Title Box with Scroll Banner -->
-    <div class="title-box">
-        <h1>Path of Ascension</h1>
-        <p>Embark on your journey through the realms of cultivation and adventure</p>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <!-- Title Box with Scroll Banner -->
+        <div class="title-box">
+            <h1>Path of Ascension</h1>
+            <p>Embark on your journey through the realms of cultivation and adventure</p>
+        </div>
+
+        <!-- Introduction about cultivation -->
+        <div class="introduction">
+            <img src="images/vertical-scroll.png" alt="Vertical Scroll">
+            <p>
+                Welcome to the Path of Ascension, where you will embark on a journey through the realms of cultivation and adventure.
+                Discover a vast world of ancient magics, wonders, supernatural beast.
+                Join your fellow cultivators in quests, challenges, and epic battles as you strive to ascend to the pinnacle of power and enlightenment.
+                Remember, the path is treacherous, but the rewards are beyond imagination. Are you ready to take the first step on your journey?
+            </p>
+            
+        </div>
     </div>
 
-    <!-- Introduction about cultivation -->
-    <section class="introduction">
-        <img src="images/vertical-scroll.png" alt="Vertical Scroll">
-        <p>
-            Welcome to the Path of Ascension, where you will embark on a journey through the realms of cultivation and adventure.
-            Discover a vast world of ancient magics, wonders, supernatural beast.
-            Join your fellow cultivators in quests, challenges, and epic battles as you strive to ascend to the pinnacle of power and enlightenment.
-            Remember, the path is treacherous, but the rewards are beyond imagination. Are you ready to take the first step on your journey?
-        </p>
-        
-    </section>
-
     <!-- Cultivation Journey -->
-    <section class="cultivation-journey">
+    <div class="cultivation-journey">
         <h2>Your Journey Progress</h2>
 
         <input type="radio" name="region" id="region1"
@@ -142,10 +148,11 @@
                 </p>
             </article>
         </div>
-    </section>
+    </div>
 
-
-
+    <footer class="site-footer">
+        <p>&copy; 2026 Path of Ascension. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
