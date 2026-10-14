@@ -96,14 +96,12 @@ h1, h2, h3, .site-logo {
     outline-offset: 5px;
 }
 
-#main-container {
-
-}
-
-#main-container::after {
-    content: "";
-    display: table;
-    clear: both;
+footer.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
