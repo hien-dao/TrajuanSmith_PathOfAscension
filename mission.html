@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A xianxia-themed Quest Explorer website">
-    <title>Path of Ascension</title>
+
+    <title>Quest Journal | Path of Ascension</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mission.css">
 </head>
 <body>
     <header class="site-header">
@@ -15,14 +18,259 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="world.html">World</a></li>
-                <li><a href="mission.html">Mission</a></li>
+                <li><a href="mission.html" aria-current="page">Mission</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
     </header>
+
+    <main class="quest-journal">
+
+        <header class="journal-intro">
+            <h1>Cultivator's Quest Journal</h1>
+
+            <p>
+                Every step toward ascension begins with a trial.
+                Explore available missions, overcome challenges,
+                and follow your path to becoming a powerful cultivator.
+            </p>
+        </header>
+
+
+        <!-- Mission Selection -->
+        <section class="mission-selection" aria-labelledby="mission-selection-title">
+            <h2 id="mission-selection-title">Quest Options</h2>
+
+            <p>
+                Choose a quest to view its objectives, rewards,
+                and requirements.
+            </p>
+
+            <div class="mission-grid">
+
+                <!-- Starting Village Mission -->
+                <a href="#cultivators-awakening" class="mission-card available">
+                    <h3>The Cultivator's Awakening</h3>
+                    <p>Starting Village</p>
+                    
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
+                </a>
+
+                <!-- Grey Spirit Forest Mission -->
+                <a href="#spiritwood-investigation" class="mission-card available">
+                    <h3>Spiritwood Investigation</h3>
+                    <p>Grey Spirit Forest</p>
+                    
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
+                </a>
+
+                <!-- Blue Mountain Sect Mission -->
+                <div class="mission-card locked">
+                    <h3>Trial of the Inner Disciple</h3>
+                    <p>Blue Mountain Sect</p>
+                    <span class="mission-status">Locked</span>
+
+                    <p class="unlock-requirement">
+                        <strong>Unlock Requirement:</strong> Complete The Cultivator's Awakening
+                        and Spiritwood Investigation.
+                    </p>
+                </div>
+                
+
+                <!-- Ancient Azure Ruins Mission -->
+                <div class="mission-card locked">
+                    <h3>Secrets of the Azure Ancients</h3>
+                    <p>Ancient Azure Ruins</p>
+                    <span class="mission-status">Locked</span>
+
+                    <p class="unlock-requirement">
+                        <strong>Unlock Requirement:</strong> Complete Trial of the Inner Disciple.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Mission Details -->
+        <section class="mission-details" aria-labelledby="mission-details-title">
+            <h2 id="mission-details-title">Mission Details</h2>
+
+            <!-- Starting Village Mission -->
+            <article id="cultivators-awakening" class="mission-detail">
+                <div class="mission-detail-header">
+                    <h3>The Cultivator's Awakening</h3>
+
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
+                </div>
+
+                <p class="mission-location">
+                    Starting Village | Difficulty: Easy
+                </p>
+
+                <div class="mission-overview">
+                    <h4>Mission Overview</h4>
+                    <p>
+                        Every great cultivator begins with their first step.
+                        Explore the Starting Village, learn the fundamentals
+                        of cultivation, and prepare for the challenges ahead.
+                    </p>
+                </div>
+
+                <div class="mission-objectives">
+                    <h4>Objectives</h4>
+                    <ul>
+                        <li>Speak with the village elder.</li>
+                        <li>Learn the basics of spiritual energy.</li>
+                        <li>Complete your first cultivation training.</li>
+                    </ul>
+                </div>
+
+                <div class="mission-rewards">
+                    <h4>Rewards</h4>
+                    <ul>
+                        <li>100 Experience Points</li>
+                        <li>10 Spirit Stones</li>
+                        <li>Beginner Cultivation Manual</li>
+                    </ul>
+                </div>
+
+
+                <!-- Mission Progress Controls -->
+                <div class="mission-actions">
+
+                    <input
+                        type="checkbox"
+                        id="awakening-accepted"
+                        class="mission-checkbox"
+                    >
+
+                    <input
+                        type="checkbox"
+                        id="awakening-completed"
+                        class="mission-checkbox"
+                    >
+
+                    <div class="mission-action-controls">
+
+                        <label for="awakening-accepted" class="action-button take-button">
+                            Take Mission
+                        </label>
+
+                        <label for="awakening-completed" class="action-button complete-button">
+                            Complete Mission
+                        </label>
+
+                        <p class="mission-complete-message">
+                            Mission Completed!
+                        </p>
+
+                    </div>
+                </div>
+
+            </article>
+
+
+        <!-- Grey Spirit Forest Mission -->
+        <article id="spiritwood-investigation" class="mission-detail">
+
+            <div class="mission-detail-header">
+                <h3>Spiritwood Investigation</h3>
+                
+                <div class="mission-status-group">
+                    <span class="mission-status status-available">Available</span>
+                    <span class="mission-status status-progress">In Progress</span>
+                    <span class="mission-status status-completed">Completed</span>
+                </div>
+            </div>
+
+            <p class="mission-location">
+                Grey Spirit Forest | Difficulty: Moderate
+            </p>
+
+            <div class="mission-overview">
+                <h4>Mission Overview</h4>
+                <p>
+                    Strange spiritual disturbances have been reported
+                    throughout the Grey Spirit Forest. Investigate the
+                    source of these disturbances, gather spiritual herbs,
+                    and overcome the supernatural beasts lurking within.
+                </p>
+            </div>
+
+            <div class="mission-objectives">
+                <h4>Objectives</h4>
+                <ul>
+                    <li>Enter the Grey Spirit Forest.</li>
+                    <li>Gather three spiritual herbs.</li>
+                    <li>Defeat the forest's spirit beasts.</li>
+                    <li>Investigate the mysterious spiritual disturbance.</li>
+                </ul>
+            </div>
+
+            <div class="mission-rewards">
+                <h4>Rewards</h4>
+                <ul>
+                    <li>500 Experience Points</li>
+                    <li>25 Spirit Stones</li>
+                    <li>Spirit Beast Core</li>
+                </ul>
+            </div>
+
+
+            <!-- Mission Progress Controls -->
+            <div class="mission-actions">
+
+                <input type="checkbox"
+                    id="spiritwood-accepted"
+                    class="mission-checkbox">
+
+                <input type="checkbox"
+                    id="spiritwood-completed"
+                    class="mission-checkbox">
+
+                <div class="mission-action-controls">
+
+                    <label for="spiritwood-accepted" class="action-button take-button">
+                        Take Mission
+                    </label>
+
+                    <label for="spiritwood-completed" class="action-button complete-button">
+                        Complete Mission
+                    </label>
+
+                    <p class="mission-complete-message">
+                        Mission Completed!
+                    </p>
+
+                </div>
+            </div>
+
+
+        </article>
+
+        </section>
+
+    </main>
  
+    <footer class="site-footer">
+        <p>&copy; 2026 Path of Ascension. All rights reserved.</p>
+    </footer>
 
 
 </body>

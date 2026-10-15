@@ -1,0 +1,456 @@
+
+/* Quest Journal Layout */
+.quest-journal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Journal Introduction */
+.journal-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.journal-intro h1 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.journal-intro p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Mission Selection */
+.mission-selection {
+    margin-bottom: 40px;
+}
+
+.mission-selection h2 {
+    margin-bottom: 15px;
+}
+
+.mission-selection > p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+/* Mission Card Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual Mission Cards */
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 25px;
+
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.mission-card h3 {
+    font-size: 1.2rem;
+}
+
+.mission-card p {
+    color: var(--text-secondary);
+}
+
+/* Mission Status */
+.mission-status {
+    align-self: flex-start;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Mission Status Groups */
+.mission-status-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the later statuses initially */
+.status-progress,
+.status-completed {
+    display: none;
+}
+
+
+/* In Progress badge appearance */
+.mission-card.available .mission-status.status-progress,
+.mission-detail .mission-status.status-progress {
+    background-color: #173d4a;
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+}
+
+
+/* Completed badge appearance */
+.mission-card.available .mission-status.status-completed,
+.mission-detail .mission-status.status-completed {
+    background-color: #203f35;
+    color: #9ce5b4;
+    border: 1px solid #5da878;
+}
+
+
+/* Starting Village: Accepted Mission */
+.quest-journal:has(#awakening-accepted:checked)
+.mission-card[href="#cultivators-awakening"] .status-available,
+.quest-journal:has(#awakening-accepted:checked)
+#cultivators-awakening .status-available {
+    display: none;
+}
+
+.quest-journal:has(#awakening-accepted:checked)
+.mission-card[href="#cultivators-awakening"] .status-progress,
+.quest-journal:has(#awakening-accepted:checked)
+#cultivators-awakening .status-progress {
+    display: inline-block;
+}
+
+/* Starting Village: Completed Mission */
+.quest-journal:has(#awakening-completed:checked)
+.mission-card[href="#cultivators-awakening"] .status-progress,
+.quest-journal:has(#awakening-completed:checked)
+#cultivators-awakening .status-progress {
+    display: none;
+}
+
+.quest-journal:has(#awakening-completed:checked)
+.mission-card[href="#cultivators-awakening"] .status-completed,
+.quest-journal:has(#awakening-completed:checked)
+#cultivators-awakening .status-completed {
+    display: inline-block;
+}
+
+
+/* Spiritwood Investigation: In Progress */
+
+/* Hide Available after accepting */
+.quest-journal:has(#spiritwood-accepted:checked)
+.mission-card[href="#spiritwood-investigation"] .status-available,
+.quest-journal:has(#spiritwood-accepted:checked)
+#spiritwood-investigation .status-available {
+    display: none;
+}
+
+/* Show In Progress after accepting */
+.quest-journal:has(#spiritwood-accepted:checked)
+.mission-card[href="#spiritwood-investigation"] .status-progress,
+.quest-journal:has(#spiritwood-accepted:checked)
+#spiritwood-investigation .status-progress {
+    display: inline-block;
+}
+
+
+/* Spiritwood Investigation: Completed */
+
+/* Hide In Progress after completing */
+.quest-journal:has(#spiritwood-completed:checked)
+.mission-card[href="#spiritwood-investigation"] .status-progress,
+.quest-journal:has(#spiritwood-completed:checked)
+#spiritwood-investigation .status-progress {
+    display: none;
+}
+
+/* Show Completed after completing */
+.quest-journal:has(#spiritwood-completed:checked)
+.mission-card[href="#spiritwood-investigation"] .status-completed,
+.quest-journal:has(#spiritwood-completed:checked)
+#spiritwood-investigation .status-completed {
+    display: inline-block;
+}
+
+
+
+/* Available Missions */
+.mission-card.available {
+    border-color: var(--accent-gold);
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.mission-card.available .mission-status {
+    background-color: #45371f;
+    color: #f1d294;
+}
+
+.mission-card.available:hover {
+    transform: translateY(-5px);
+    background-color: #243d52;
+}
+
+.mission-card.available:focus-visible {
+    outline: 3px solid var(--accent-cyan);
+    outline-offset: 4px;
+}
+
+/* Locked Missions */
+.mission-card.locked {
+    background-color: #101f30;
+    border-color: #293b50;
+    color: #8998a8;
+}
+
+.mission-card.locked .mission-status {
+    background-color: #263548;
+    color: #b7c3d0;
+}
+
+
+/* Locked Mission Requirements */
+.mission-card.locked .unlock-requirement {
+    margin-top: 10px;
+    padding-top: 12px;
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+
+
+/* Mission Details Section */
+.mission-details {
+    margin-top: 40px;
+}
+
+.mission-details > h2 {
+    margin-bottom: 25px;
+}
+
+/* Individual Mission Panel */
+.mission-detail {
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Displays only the selected mission */
+.mission-detail:target {
+    display: flex;
+}
+
+/* Mission Title and Status */
+.mission-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.mission-detail-header h3 {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+/* Mission Location */
+.mission-location {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Mission Information Panels */
+.mission-overview,
+.mission-objectives,
+.mission-rewards {
+    background-color: #142438;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.mission-detail h4 {
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.mission-overview p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.mission-objectives ul,
+.mission-rewards ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+
+/* Mission Progress Controls */
+.mission-actions {
+    margin-top: 10px;
+}
+
+.mission-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.mission-action-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 12px 20px;
+
+    background-color: #243d52;
+    color: #f1d294;
+
+    border: 1px solid var(--accent-gold);
+    border-radius: 6px;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+}
+
+.complete-button,
+.mission-complete-message {
+    display: none;
+}
+
+/* After accepting, show Complete Mission */
+#awakening-accepted:checked ~ .mission-action-controls .take-button {
+    display: none;
+}
+
+.mission-checkbox:focus-visible ~ .mission-action-controls .action-button {
+    outline: 3px solid var(--accent-cyan);
+    outline-offset: 4px;
+}
+
+#awakening-accepted:checked ~ .mission-action-controls .complete-button {
+    display: inline-block;
+}
+
+/* After completing, show completion message */
+#awakening-completed:checked ~ .mission-action-controls .complete-button {
+    display: none;
+}
+
+#awakening-completed:checked ~ .mission-action-controls .mission-complete-message {
+    display: block;
+    color: #9ce5b4;
+    font-weight: 600;
+}
+
+
+/* Spiritwood Investigation: Mission Controls */
+
+/* Hide Take Mission after accepting */
+#spiritwood-accepted:checked ~ .mission-action-controls .take-button {
+    display: none;
+}
+
+/* Show Complete Mission after accepting */
+#spiritwood-accepted:checked ~ .mission-action-controls .complete-button {
+    display: inline-block;
+}
+
+/* Hide Complete Mission after completing */
+#spiritwood-completed:checked ~ .mission-action-controls .complete-button {
+    display: none;
+}
+
+/* Show completion message */
+#spiritwood-completed:checked ~ .mission-action-controls .mission-complete-message {
+    display: block;
+    color: #9ce5b4;
+    font-weight: 600;
+}
+
+
+/* Completion Stylings*/
+
+/* Starting Village: In Progress Border */
+.quest-journal:has(#awakening-accepted:checked)
+.mission-card[href="#cultivators-awakening"] {
+    border-color: var(--accent-cyan);
+}
+
+/* Starting Village: Completed Border */
+.quest-journal:has(#awakening-completed:checked)
+.mission-card[href="#cultivators-awakening"] {
+    border-color: #5da878;
+}
+
+/* Spiritwood: In Progress Border */
+.quest-journal:has(#spiritwood-accepted:checked)
+.mission-card[href="#spiritwood-investigation"] {
+    border-color: var(--accent-cyan);
+}
+
+/* Spiritwood: Completed Border */
+.quest-journal:has(#spiritwood-completed:checked)
+.mission-card[href="#spiritwood-investigation"] {
+    border-color: #5da878;
+}
+
+
+
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .quest-journal {
+        padding: 25px 20px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-detail {
+        padding: 20px;
+    }
+
+    .mission-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .mission-card.available {
+        transition: none;
+    }
+
+    .mission-card.available:hover {
+        transform: none;
+    }
+}
