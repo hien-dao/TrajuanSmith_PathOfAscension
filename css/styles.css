@@ -106,6 +106,18 @@ h1, h2, h3, .site-logo {
     clear: both;
 }
 
+/* Shared Website Footer */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
 /* Responsive Design */
 @media (max-width: 700px) {
 
