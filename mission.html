@@ -54,14 +54,24 @@
                 <a href="#cultivators-awakening" class="mission-card available">
                     <h3>The Cultivator's Awakening</h3>
                     <p>Starting Village</p>
-                    <span class="mission-status">Available</span>
+                    
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
                 </a>
 
                 <!-- Grey Spirit Forest Mission -->
                 <a href="#spiritwood-investigation" class="mission-card available">
                     <h3>Spiritwood Investigation</h3>
                     <p>Grey Spirit Forest</p>
-                    <span class="mission-status">Available</span>
+                    
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
                 </a>
 
                 <!-- Blue Mountain Sect Mission -->
@@ -91,7 +101,12 @@
             <article id="cultivators-awakening" class="mission-detail">
                 <div class="mission-detail-header">
                     <h3>The Cultivator's Awakening</h3>
-                    <span class="mission-status">Available</span>
+
+                    <div class="mission-status-group">
+                        <span class="mission-status status-available">Available</span>
+                        <span class="mission-status status-progress">In Progress</span>
+                        <span class="mission-status status-completed">Completed</span>
+                    </div>
                 </div>
 
                 <p class="mission-location">
@@ -124,6 +139,40 @@
                         <li>Beginner Cultivation Manual</li>
                     </ul>
                 </div>
+
+
+                <!-- Mission Progress Controls -->
+                <div class="mission-actions">
+
+                    <input
+                        type="checkbox"
+                        id="awakening-accepted"
+                        class="mission-checkbox"
+                    >
+
+                    <input
+                        type="checkbox"
+                        id="awakening-completed"
+                        class="mission-checkbox"
+                    >
+
+                    <div class="mission-action-controls">
+
+                        <label for="awakening-accepted" class="action-button take-button">
+                            Take Mission
+                        </label>
+
+                        <label for="awakening-completed" class="action-button complete-button">
+                            Complete Mission
+                        </label>
+
+                        <p class="mission-complete-message">
+                            Mission Completed!
+                        </p>
+
+                    </div>
+                </div>
+
             </article>
 
 
@@ -132,7 +181,12 @@
 
             <div class="mission-detail-header">
                 <h3>Spiritwood Investigation</h3>
-                <span class="mission-status">Available</span>
+                
+                <div class="mission-status-group">
+                    <span class="mission-status status-available">Available</span>
+                    <span class="mission-status status-progress">In Progress</span>
+                    <span class="mission-status status-completed">Completed</span>
+                </div>
             </div>
 
             <p class="mission-location">
@@ -167,6 +221,36 @@
                     <li>Spirit Beast Core</li>
                 </ul>
             </div>
+
+
+            <!-- Mission Progress Controls -->
+            <div class="mission-actions">
+
+                <input type="checkbox"
+                    id="spiritwood-accepted"
+                    class="mission-checkbox">
+
+                <input type="checkbox"
+                    id="spiritwood-completed"
+                    class="mission-checkbox">
+
+                <div class="mission-action-controls">
+
+                    <label for="spiritwood-accepted" class="action-button take-button">
+                        Take Mission
+                    </label>
+
+                    <label for="spiritwood-completed" class="action-button complete-button">
+                        Complete Mission
+                    </label>
+
+                    <p class="mission-complete-message">
+                        Mission Completed!
+                    </p>
+
+                </div>
+            </div>
+
 
         </article>
 
