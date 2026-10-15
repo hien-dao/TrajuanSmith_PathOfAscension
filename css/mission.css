@@ -110,6 +110,82 @@
     color: #b7c3d0;
 }
 
+
+
+/* Mission Details Section */
+.mission-details {
+    margin-top: 40px;
+}
+
+.mission-details > h2 {
+    margin-bottom: 25px;
+}
+
+/* Individual Mission Panel */
+.mission-detail {
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Displays only the selected mission */
+.mission-detail:target {
+    display: flex;
+}
+
+/* Mission Title and Status */
+.mission-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.mission-detail-header h3 {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+/* Mission Location */
+.mission-location {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Mission Information Panels */
+.mission-overview,
+.mission-objectives,
+.mission-rewards {
+    background-color: #142438;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.mission-detail h4 {
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.mission-overview p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.mission-objectives ul,
+.mission-rewards ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .quest-journal {
@@ -118,6 +194,15 @@
 
     .mission-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mission-detail {
+        padding: 20px;
+    }
+
+    .mission-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
