@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A xianxia-themed Quest Explorer website">
-    <title>Path of Ascension</title>
+
+    <title>Quest Journal | Path of Ascension</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mission.css">
 </head>
 <body>
     <header class="site-header">
@@ -15,13 +18,71 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="world.html">World</a></li>
-                <li><a href="mission.html">Mission</a></li>
+                <li><a href="mission.html" aria-current="page">Mission</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
     </header>
+
+    <main class="quest-journal">
+
+        <header class="journal-intro">
+            <h1>Cultivator's Quest Journal</h1>
+
+            <p>
+                Every step toward ascension begins with a trial.
+                Explore available missions, overcome challenges,
+                and follow your path to becoming a powerful cultivator.
+            </p>
+        </header>
+
+
+        <!-- Mission Selection -->
+        <section class="mission-selection" aria-labelledby="mission-selection-title">
+            <h2 id="mission-selection-title">Quest Options</h2>
+
+            <p>
+                Choose a quest to view its objectives, rewards,
+                and requirements.
+            </p>
+
+            <div class="mission-grid">
+
+                <!-- Starting Village Mission -->
+                <a href="#cultivators-awakening" class="mission-card available">
+                    <h3>The Cultivator's Awakening</h3>
+                    <p>Starting Village</p>
+                    <span class="mission-status">Available</span>
+                </a>
+
+                <!-- Grey Spirit Forest Mission -->
+                <a href="#spiritwood-investigation" class="mission-card available">
+                    <h3>Spiritwood Investigation</h3>
+                    <p>Grey Spirit Forest</p>
+                    <span class="mission-status">Available</span>
+                </a>
+
+                <!-- Blue Mountain Sect Mission -->
+                <div class="mission-card locked">
+                    <h3>Trial of the Inner Disciple</h3>
+                    <p>Blue Mountain Sect</p>
+                    <span class="mission-status">Locked</span>
+                </div>
+
+                <!-- Ancient Azure Ruins Mission -->
+                <div class="mission-card locked">
+                    <h3>Secrets of the Azure Ancients</h3>
+                    <p>Ancient Azure Ruins</p>
+                    <span class="mission-status">Locked</span>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
  
 
 

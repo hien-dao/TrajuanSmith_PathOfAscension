@@ -1,0 +1,133 @@
+
+/* Quest Journal Layout */
+.quest-journal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Journal Introduction */
+.journal-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.journal-intro h1 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.journal-intro p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Mission Selection */
+.mission-selection {
+    margin-bottom: 40px;
+}
+
+.mission-selection h2 {
+    margin-bottom: 15px;
+}
+
+.mission-selection > p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+/* Mission Card Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual Mission Cards */
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 25px;
+
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.mission-card h3 {
+    font-size: 1.2rem;
+}
+
+.mission-card p {
+    color: var(--text-secondary);
+}
+
+/* Mission Status */
+.mission-status {
+    align-self: flex-start;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Available Missions */
+.mission-card.available {
+    border-color: var(--accent-gold);
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.mission-card.available .mission-status {
+    background-color: #45371f;
+    color: #f1d294;
+}
+
+.mission-card.available:hover {
+    transform: translateY(-5px);
+    background-color: #243d52;
+}
+
+.mission-card.available:focus-visible {
+    outline: 3px solid var(--accent-cyan);
+    outline-offset: 4px;
+}
+
+/* Locked Missions */
+.mission-card.locked {
+    background-color: #101f30;
+    border-color: #293b50;
+    color: #8998a8;
+}
+
+.mission-card.locked .mission-status {
+    background-color: #263548;
+    color: #b7c3d0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .quest-journal {
+        padding: 25px 20px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .mission-card.available {
+        transition: none;
+    }
+
+    .mission-card.available:hover {
+        transform: none;
+    }
+}
