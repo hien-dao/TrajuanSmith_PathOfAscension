@@ -24,7 +24,7 @@
 }
 
 html {
-
+    scroll-behavior: smooth;
 }
 
 
@@ -142,5 +142,9 @@ footer.site-footer {
 @media (prefers-reduced-motion: reduce) {
     .nav-links a {
         transition: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
     }
 }
