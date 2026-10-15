@@ -24,7 +24,7 @@
 }
 
 html {
-
+    scroll-behavior: smooth;
 }
 
 
@@ -144,5 +144,9 @@ h1, h2, h3, .site-logo {
 @media (prefers-reduced-motion: reduce) {
     .nav-links a {
         transition: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
     }
 }

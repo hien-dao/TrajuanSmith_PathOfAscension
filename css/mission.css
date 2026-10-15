@@ -199,6 +199,27 @@
     outline-offset: 4px;
 }
 
+
+/* Available Mission Background Images */
+.mission-card.awakening-bg {
+    background-image:
+        linear-gradient(rgba(11, 23, 38, 0.75), rgba(11, 23, 38, 0.85)),
+        url("../images/starting-village.jpeg");
+}
+
+.mission-card.spiritwood-bg {
+    background-image:
+        linear-gradient(rgba(11, 23, 38, 0.75), rgba(11, 23, 38, 0.85)),
+        url("../images/spirit-forest.jpg");
+}
+
+.mission-card.available {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 /* Locked Missions */
 .mission-card.locked {
     background-color: #101f30;
