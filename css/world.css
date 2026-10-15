@@ -17,7 +17,28 @@
     border: 2px solid #34465c;
     border-radius: 12px;
     overflow: hidden;
+
+    transition: transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* Available Region Hover Effect */
+.region-card.available:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 20px rgba(117, 205, 224, 0.15);
+}
+
+
+/* Highlight Available Region When Its Link Is Focused */
+.region-card.available:focus-within {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 20px rgba(117, 205, 224, 0.15);
+}
+
+
 
 .region-image {
     display: block;
@@ -133,6 +154,14 @@
     }
 
     .region-link:hover {
+        transform: none;
+    }
+    
+    .region-card {
+        transition: none;
+    }
+
+    .region-card.available:hover {
         transform: none;
     }
 }
