@@ -63,4 +63,43 @@ main {
     background-image: url('../images/cosmic-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.character-frame {
+    position: relative;
+}
+
+.character-frame img {
+    width: 100%;
+    height: auto;
+}
+
+.character-frame h2 {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: black;
+    font-size: 1.3em;
+}
+
+.character-frame p {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    color: black;
+    font-size: 1em;
+    text-align: left;
 }
