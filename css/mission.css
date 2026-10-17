@@ -463,7 +463,17 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .developer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .developer-card {
+        padding: 25px 20px;
+    }
 }
+
+
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
