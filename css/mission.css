@@ -369,7 +369,17 @@
     display: none;
 }
 
+/* Highlight the action associated with the focused checkbox */
 .mission-checkbox:focus-visible ~ .mission-action-controls .action-button {
+    outline: none;
+}
+
+.mission-actions:has(
+    input[id$="-accepted"]:focus-visible
+) .take-button,
+.mission-actions:has(
+    input[id$="-completed"]:focus-visible
+) .complete-button {
     outline: 3px solid var(--accent-cyan);
     outline-offset: 4px;
 }
@@ -462,14 +472,6 @@
     .mission-detail-header {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .developer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .developer-card {
-        padding: 25px 20px;
     }
 }
 

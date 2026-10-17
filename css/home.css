@@ -128,6 +128,19 @@ main {
     transform: scale(1.05);
 }
 
+/* Show keyboard focus on the selected region */
+.region-trigger:focus-visible ~ .featured-regions .region-label img {
+    outline: none;
+}
+
+#region1:focus-visible ~ .featured-regions label[for="region1"] img,
+#region2:focus-visible ~ .featured-regions label[for="region2"] img,
+#region3:focus-visible ~ .featured-regions label[for="region3"] img,
+#region4:focus-visible ~ .featured-regions label[for="region4"] img {
+    outline: 3px solid var(--accent-cyan);
+    outline-offset: 5px;
+}
+
 .region-label img {
     width: 150px;
     height: 150px;
@@ -395,5 +408,32 @@ main {
     #region4:checked ~ .journey-progress .node-2 .node-status::after,
     #region4:checked ~ .journey-progress .node-3 .node-status::after {
         font-size: 0.65rem;
+    }
+
+    .title-box {
+        min-height: 0;
+        height: 24vw;
+        padding: 0 5%;
+    }
+
+    .title-box h1 {
+        font-size: 5vw;
+    }
+
+    .title-box p {
+        font-size: 2vw;
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .region-label,
+    .region-label img,
+    .progress-fill {
+        transition: none;
+    }
+
+    .region-label:hover {
+        transform: none;
     }
 }
