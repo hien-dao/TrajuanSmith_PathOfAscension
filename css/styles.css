@@ -96,14 +96,6 @@ h1, h2, h3, .site-logo {
     outline-offset: 5px;
 }
 
-footer.site-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    font-size: 0.9rem;
-}
-
 /* Shared Website Footer */
 .site-footer {
     text-align: center;
