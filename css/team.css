@@ -247,6 +247,10 @@ main {
     transition: filter 0.25s ease, transform 0.25s ease;
 }
 
+.highlight {
+    color: var(--accent-gold);
+}
+
 .rank:hover {
     filter: brightness(1.3);
     transform: scale(1.03);
@@ -269,7 +273,7 @@ main {
     .title-box h1 {
         font-size: 1.5rem;
     }
-    
+
     .developer-grid {
         grid-template-columns: 1fr;
     }
