@@ -1,69 +1,71 @@
 # Path of Ascension 🏔️
 
-## A Xianxia-Inspired Quest Explorer Website
+**A Xianxia-Inspired Quest Explorer Website**  
+**Course:** CSC 4370 Web Programming  
+**Project:** Project 1 — HTML & CSS  
+**Team:** Trajuan Smith and Hien Dao
 
 ## 📖 About the Project
 
-Path of Ascension is a front-end web development school project inspired by the Chinese fantasy genre of Xianxia, which revolves around cultivation, spiritual energy, martial arts, and the pursuit of immortality.
+Path of Ascension is a front-end web development project inspired by *xianxia*, a Chinese fantasy genre centered on cultivation, spiritual energy, martial arts, and the pursuit of immortality.
 
-The website allows users to explore a fictional cultivation world, discover different regions, view available quests, interact with mission progress controls, and learn about the characters and developers behind the project.
+Visitors can explore a fictional cultivation world, discover regions, review missions, interact with mission progress controls, and learn about the characters and developers. The project emphasizes HTML5, CSS3, responsive layouts, and accessible markup, with core interactions implemented without JavaScript.
 
-The project focuses on building a visually engaging and interactive website using HTML5 and CSS3, without relying on JavaScript for its core interactions.
+## ✨ Website Features
 
-## ✨ Features
+### 1. Home (`index.html`)
+- Introduces the cultivation world and the adventure.
+- Features a journey tracker with Starter Village, Grey Spirit Forest, Blue Mountain Sect, and Ancient Azure Ruins.
+- Presents region descriptions and visual journey progress.
 
-### 1. Home Page
+### 2. World Map (`world.html`)
+- Displays four cultivation regions with descriptions, difficulty information, and availability indicators.
+- Provides navigation from available regions to the corresponding missions.
+- Distinguishes locked content from available links; locked items are not interactive links.
+- Uses responsive region-card layouts.
 
-- Introduces the world of cultivation and adventure.
-- Features a visual journey tracker with four regions:
-  - Starter Village
-  - Grey Spirit Forest
-  - Blue Mountain Sect
-  - Ancient Azure Ruins
-- Allows users to select regions and view their descriptions.
-- Displays a CSS-based journey progress bar.
+### 3. Mission Journal (`mission.html`)
+- Presents available and locked missions with objectives, difficulty information, and rewards.
+- Supports mission selection and CSS-based mission status/progress interactions.
+- Shows mission status changes and completion feedback.
+- Keeps locked missions unavailable in this prototype; completing a mission does not automatically unlock another one.
 
-### 2. World Map
+**Featured missions:**
+- The Cultivator's Awakening — Starter Village
+- Spiritwood Investigation — Grey Spirit Forest
+- Trial of the Inner Disciple — Blue Mountain Sect
+- Secrets of the Azure Ancients — Ancient Azure Ruins
 
-- Showcases four unique cultivation regions.
-- Provides descriptions and difficulty levels for each region.
-- Distinguishes between available and locked regions.
-- Links available regions to their corresponding missions.
-
-### 3. Mission Journal
-
-- Displays available and locked quests.
-- Provides mission descriptions, objectives, difficulty levels, and rewards.
-- Includes CSS-based controls for accepting and completing missions.
-- Displays mission completion messages and status indicators.
-- Introduces requirements for unlocking future missions.
-
-**Featured Missions:**
-
-- **The Cultivator's Awakening** — Starting Village
-- **Spiritwood Investigation** — Grey Spirit Forest
-- **Trial of the Inner Disciple** — Blue Mountain Sect
-- **Secrets of the Azure Ancients** — Ancient Azure Ruins
-
-### 4. Team & Cultivation Realms
-
+### 4. Team & Cultivation Realms (`team.html`)
 - Introduces fictional cultivator characters and their cultivation ranks.
-- Displays a cultivation pyramid ranging from Mortal to Soul Formation.
-- Includes developer profiles describing each team member's contributions.
-- Features decorative imagery and CSS animations.
+- Displays a cultivation pyramid from Mortal to Soul Formation.
+- Includes short developer profiles, themed imagery, and CSS animations.
 
-### 5. Design & Navigation
+### Separate Team Introduction (`team-introduction.html`)
 
-- Consistent navigation across all four pages.
-- Shared styling through reusable CSS stylesheets.
-- Fantasy-inspired images and visual elements.
-- Semantic HTML and accessibility features, including descriptive image alternatives and navigation labels.
+This is a **project documentation page**, separate from the four-page website experience. It records:
+- Project overview and leadership responsibilities.
+- Individual developer contributions.
+- Team time tracking.
+- Coordination and development workflow.
 
-## 🛠️ Technologies Used
+Its page-specific styles are in `css/team-introduction.css`.
 
-- **HTML5** — Website structure and content.
-- **CSS3** — Styling, layouts, animations, progress indicators, and interactive controls.
-- **CSS Radio Buttons and Checkboxes** — Interactive region selection and mission progress controls without JavaScript.
+## 🛠️ Technologies
+
+- **HTML5:** Semantic page structure, forms/controls, and accessible content.
+- **CSS3:** Responsive layouts, visual design, animations, state styling, and interactions.
+- **CSS selectors and form controls:** Interactions without JavaScript for the core experience.
+- **Git and GitHub:** Version control and collaboration.
+
+## 🎨 Design and Accessibility Decisions
+
+- **Consistent navigation:** Shared navigation and footer patterns connect the four main website pages.
+- **Modular stylesheets:** `styles.css` holds shared styles; individual pages use their own CSS files.
+- **Responsive layouts:** Grids and media queries adapt content for smaller screens.
+- **Clear locked states:** Locked regions and missions are represented as non-interactive content rather than misleading active links.
+- **Semantic and accessible markup:** Headings, section labels, descriptive image alternatives where appropriate, and ARIA attributes support navigation and understanding.
+- **Reduced motion:** The Team page includes a `prefers-reduced-motion` rule to limit decorative animation for visitors who request it.
 
 ## 📁 Project Structure
 
@@ -73,79 +75,78 @@ Path-of-Ascension/
 ├── world.html
 ├── mission.html
 ├── team.html
+├── team-introduction.html
 ├── css/
 │   ├── styles.css
 │   ├── home.css
 │   ├── world.css
 │   ├── mission.css
-│   └── team.css
+│   ├── team.css
+│   └── team-introduction.css
 ├── images/
 └── README.md
 ```
 
+Other project documentation or evidence files may be stored separately from the website's root folder.
+
 ## 🚀 Getting Started
 
-[Visit Live Website](https://codd.cs.gsu.edu/~hdao5/webprog/pw/pw1/index.html)
+**Published website link recorded in the original README:** [Path of Ascension on CODD](https://codd.cs.gsu.edu/~tsmith413/WebDev/Projects/Project01/TrajuanSmith_PathOfAscension/index.html)  
 
-### Running the Project
 
-1. Download or clone the repository.
-2. Ensure the `css` and `images` directories are in the correct locations.
-3. Open the project folder.
-4. Open `index.html` in your web browser.
-5. Use the navigation bar to explore the website.
+To run locally:
 
-Alternatively, open the project in Visual Studio Code and use a local development server.
+1. Clone or download the repository.
+2. Keep the HTML files, `css/` directory, and `images/` directory in their relative locations.
+3. Open `index.html` in a browser, or use a local development server in Visual Studio Code.
+4. Navigate among Home, World, Mission, and Team.
+5. Open `team-introduction.html` separately to view the team documentation.
 
-## 🎮 How to Explore
+## 👨‍💻 Team and Responsibilities
 
-1. **Home:** Learn about the cultivation world and explore the journey tracker.
-2. **World:** Discover the available regions and their difficulty levels.
-3. **Mission:** Read quest objectives, review rewards, and try the mission progress controls.
-4. **Team:** Explore the character profiles, cultivation hierarchy, and developer information.
+### Trajuan Smith — Project Leader; World Map & Mission Developer
 
-## 🎯 Project Objectives
+Coordinated project responsibilities and integration; developed the World Map and Mission pages, region-to-mission navigation, responsive layouts, mission interactions, and accessibility improvements.
 
-This project was developed to practise and demonstrate front-end web development skills, including:
+### Hien Dao — Homepage & Team/About Developer
 
-- Creating a multi-page website using semantic HTML.
-- Applying CSS for layout, styling, and visual consistency.
-- Building interactive elements using CSS without JavaScript.
-- Organising stylesheets and image assets into a maintainable structure.
-- Implementing navigation between pages and links to specific sections.
-- Designing a themed user interface around a fictional fantasy world.
+Developed the Homepage and Team/About page, including the journey tracker, character profiles, cultivation realms, visual styling, and animations. Collaborated on project integration.
 
-## ⚠️ Limitations
+The separate Team Introduction page contains additional responsibilities, coordination details, and the team's recorded development hours.
 
-- The website is a front-end prototype without a backend or database.
-- Mission progress uses CSS-based interactions rather than persistent game data.
-- Completing missions does not automatically unlock other regions or quests.
-- Progress is not saved as a persistent player profile.
-- User accounts, multiplayer features, and game engine functionality are not implemented.
+## 🔄 Development Workflow
 
-## 👨‍💻 Development Team
+The team divided page ownership, developed assigned features, used Git branches for changes, and integrated completed work into the shared project. Development also included reviewing navigation, styling consistency, responsiveness, and project requirements.
 
-### Trajuan Smith
+## 🤖 AI Usage Disclosure
 
-**Role:** World Map & Mission Detail Developer
+ChatGPT was used as a development and documentation assistant, including for explanations of HTML/CSS concepts, troubleshooting, accessibility and responsive-design suggestions, code-review guidance, and drafting/revising documentation such as the Team Introduction and README.
 
-Responsible for developing the World Map and Mission Detail pages, including region navigation, mission selection, and CSS-only mission progress controls.
+The team was responsible for choosing the final design, reviewing and adapting suggested code, integrating the pages, testing the site, and submitting the finished project. 
 
-### Hien Dao
+## 🎯 Learning Objectives
 
-**Role:** Homepage & Team/About Developer
+- Build a multi-page website with semantic HTML and CSS.
+- Create a consistent fantasy-themed interface with responsive layouts.
+- Implement useful interactions without relying on JavaScript.
+- Apply accessibility principles to navigation, content, and interaction states.
+- Organize styles and assets for maintainability.
+- Practice collaborative development, version control, and documentation.
 
-Responsible for developing the homepage and Team/About page, including the Journey Tracker, character profiles, and cultivation realm display.
+## ⚠️ Prototype Limitations
 
-## 📚 Acknowledgements
+- Front-end prototype only; no backend or database.
+- Mission progress is not persisted between sessions.
+- Completing missions does not automatically unlock new regions or quests.
+- No user accounts, multiplayer features, or game engine functionality.
 
-This project was created as a school project to explore front-end web development through a fantasy-themed website.
+## 📚 Credits and Acknowledgements
 
-The regions, missions, characters, and cultivation progression are part of the project's fictional setting. Third-party images and other assets should be credited to their respective creators or sources where applicable.
+Created as an educational web development project. The fictional regions, missions, and cultivation progression form the project's fantasy setting. **Review all third-party images, fonts, and other assets and add their specific source links and attribution or license information where required.**
 
 ## 📄 License
 
-This project was created for educational purposes. Please respect the licenses and attribution requirements of any third-party assets used.
+Created for educational purposes. No separate open-source license is declared here. Third-party assets remain subject to their respective licenses and attribution requirements.
 
 ---
 
