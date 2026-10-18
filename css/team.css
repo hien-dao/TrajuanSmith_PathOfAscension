@@ -7,7 +7,6 @@ main {
 /* Title box with rotating yin-yang symbols and Wukong flying animation */
 .title-box {
     background-color: var(--bg-panel);
-    color: var(--accent-gold);
     text-align: center;
     padding: 10px;
 
@@ -19,6 +18,18 @@ main {
 
     position: relative;
     overflow: hidden;
+}
+
+.title-box h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title-box p {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--text-secondary);
 }
 
 .yin-yang {
@@ -255,6 +266,10 @@ main {
 
 /* Responsive Developer Profiles */
 @media (max-width: 768px) {
+    .title-box h1 {
+        font-size: 1.5rem;
+    }
+    
     .developer-grid {
         grid-template-columns: 1fr;
     }
