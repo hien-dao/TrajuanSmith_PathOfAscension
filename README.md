@@ -85,7 +85,7 @@ Path-of-Ascension/
 
 ## 🚀 Getting Started
 
-No additional packages, dependencies, or build tools are required.
+[Visit Live Website](https://codd.cs.gsu.edu/~hdao5/webprog/pw/pw1/index.html)
 
 ### Running the Project
 
