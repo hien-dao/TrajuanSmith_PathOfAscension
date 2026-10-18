@@ -1,0 +1,15 @@
+Project 1: Path of Ascension
+Course: CSC 4370 Web Programming
+
+Team Members:
+Trajuan Smith
+Hien Dao
+
+CODD Website:
+https://codd.cs.gsu.edu/~tsmith413/WebDev/Projects/Project01/TrajuanSmith_PathOfAscension/index.html
+
+GitHub Repository:
+https://github.com/hien-dao/TrajuanSmith_PathOfAscension
+
+YouTube Presentation:
+https://www.youtube.com/watch?v=KM4NWquBACA 
