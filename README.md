@@ -89,7 +89,7 @@ Path-of-Ascension/
 
 Other project documentation or evidence files may be stored separately from the website's root folder.
 
-## 🚀 Getting Started
+## Getting Started
 
 **Published website link recorded in the original README:** [Path of Ascension on CODD](https://codd.cs.gsu.edu/~tsmith413/WebDev/Projects/Project01/TrajuanSmith_PathOfAscension/index.html)  
 
